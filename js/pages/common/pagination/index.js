@@ -1,0 +1,32 @@
+import { ITEMS_PER_PAGE } from '../../../constants.js'
+
+
+const Pagination = {
+    /**
+     * 
+     * @param {number} numberOfSensors 
+     * @returns {number}
+     */
+    getNumberOfPages: numberOfSensors => Math.ceil(numberOfSensors / ITEMS_PER_PAGE),
+    render: numberOfSensors => {
+        const numberOfPages = Pagination.getNumberOfPages(numberOfSensors)
+
+        let $paginationList = '<ul class="pagination-list" data-testid="pagination-list">'
+
+        for (let i = 1; i <= numberOfPages; i++) {
+            $paginationList += `
+                <li class="pagination-list-item">
+                    <a href="#/home">
+                        ${i}
+                    </a>
+                </li>
+            `
+        }
+
+        $paginationList += '</ul>'
+
+        return $paginationList
+    }
+}
+
+export default Pagination

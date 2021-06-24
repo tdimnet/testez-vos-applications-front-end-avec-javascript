@@ -1,0 +1,22 @@
+{
+  "name": "testez-vos-applications-front-end-avec-javascript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "devDependencies": {
+    "@babel/preset-env": "^7.14.4",
+    "@testing-library/dom": "^7.31.0",
+    "@testing-library/jest-dom": "^5.12.0",
+    "@testing-library/user-event": "^13.1.9",
+    "babel-jest": "^27.0.2",
+    "jest": "^27.0.3",
+    "jest-html-reporter": "^3.4.1"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
