@@ -14,6 +14,7 @@ const makeSum = (a, b) => a + b
  */
 const makeString = (a, b) => a * b
 
+
 describe("ToBeNan Unit Test Suites", () => {
     it('should return a NaN', () => {
         expect(makeSum(2, 2)).not.toBeNaN()

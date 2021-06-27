@@ -4,11 +4,7 @@
  */
 const getName = () => "thomas"
 
-/**
- * 
- * @returns {number}
- */
-const getAge = () => 31
+const userAge = 31
 
 describe('toBeDefined Unit Test Suites', () => {
     it('should return something', () => (
@@ -16,6 +12,6 @@ describe('toBeDefined Unit Test Suites', () => {
     ))
 
     it('should also return something', () => {
-        expect(getAge()).toBeDefined()
+        expect(userAge).toBeDefined()
     })
 })
