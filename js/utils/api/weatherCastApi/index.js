@@ -1,5 +1,5 @@
 import { isInTestEnv } from '../../env/index.js'
-import { data } from '../../../../data/weather-api-mocked-data.js'
+import { data } from '../../../../data/mock-weather-api-data.js'
 
 // Penser bien à ajouter votre clé d'API
 const ACCESS_KEY = '931f119b9236cc4743d277b1e73b6e77'
