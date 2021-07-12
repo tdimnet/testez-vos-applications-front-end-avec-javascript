@@ -6,6 +6,7 @@ import Pagination from '../pages/common/pagination/index.js'
 import SignIn from '../pages/signIn/index.js'
 
 import { handleSignInForm } from '../utils/signInForm/index.js'
+import { findComponentByPath } from '../utils/findComponentsByPath/index.js'
 
 
 const routes = [
@@ -29,9 +30,6 @@ const routes = [
 
 const parseLocation = () => location.hash.slice(1).toLocaleLowerCase() || '/'
 
-const findComponentByPath = (path, routes) => routes.find(r => r.path.match(new RegExp(`^\\${path}$`, 'gm'))) || undefined;
-
-
 const bindEventListener = () => {
     if (parseLocation() === '/') {
         handleSignInForm()
@@ -47,6 +45,12 @@ export const router = async () => {
 
     // If there is not matching route, get the "Error" Component
     const { component = ErrorPage } = findComponentByPath(path, routes) || {}
+
+    console.group()
+    console.log(path)
+    console.log(routes)
+    console.log(findComponentByPath(path, routes))
+    console.groupEnd()
     
     // Render the component in the app placeholder
     document.querySelector('#root').innerHTML = await component.render()
