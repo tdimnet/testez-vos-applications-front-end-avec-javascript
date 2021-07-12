@@ -46,12 +46,6 @@ export const router = async () => {
     // If there is not matching route, get the "Error" Component
     const { component = ErrorPage } = findComponentByPath(path, routes) || {}
 
-    console.group()
-    console.log(path)
-    console.log(routes)
-    console.log(findComponentByPath(path, routes))
-    console.groupEnd()
-    
     // Render the component in the app placeholder
     document.querySelector('#root').innerHTML = await component.render()
 
