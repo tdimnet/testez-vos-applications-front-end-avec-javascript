@@ -1,4 +1,4 @@
-import { data } from '../../../../data/mock-homepage-data'
+import { data } from '../../../../data/mock-homepage-data.js'
 
 import { isInTestEnv } from '../../env/index.js'
 

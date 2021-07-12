@@ -1,4 +1,4 @@
-{
+export const data = {
     "request": {
         "type": "LatLon",
         "query": "Lat 48.88 and Lon 2.38",
