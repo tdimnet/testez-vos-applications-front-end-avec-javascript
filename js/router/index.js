@@ -1,10 +1,12 @@
-import SignIn from '../pages/signIn/index.js'
-import Home from '../pages/home/index.js'
 import AddSensor from '../pages/addSensor/index.js'
 import ErrorPage from '../pages/404/index.js'
 import FacadeDetails from '../pages/facadeDetails/index.js'
+import Home from '../pages/home/index.js'
+import Pagination from '../pages/common/pagination/index.js'
+import SignIn from '../pages/signIn/index.js'
 
 import { handleSignInForm } from '../utils/signInForm/index.js'
+
 
 const routes = [
     {
@@ -29,14 +31,12 @@ const parseLocation = () => location.hash.slice(1).toLocaleLowerCase() || '/'
 
 const findComponentByPath = (path, routes) => routes.find(r => r.path.match(new RegExp(`^\\${path}$`, 'gm'))) || undefined;
 
+
 const bindEventListener = () => {
     if (parseLocation() === '/') {
         handleSignInForm()
     } else if (parseLocation() === '/home') {
-        const $pagination = document.querySelector('.pagination-list')
-        $pagination.addEventListener('click', (e) => {
-            e.preventDefault()
-        })
+        Pagination.handlePagination()
     }
 }
 

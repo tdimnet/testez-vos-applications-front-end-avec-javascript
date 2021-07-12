@@ -160,7 +160,7 @@ const FacadeDetails = {
 
     render: async () => {
         const sensor = await retrieveSensorsDetailsData()
-        const weatherForecaseData = await retrieveWeatherForecastData(sensor.coordinates)
+        const weatherForecastData = await retrieveWeatherForecastData(sensor.coordinates)
 
         return `
             <div class="sensor-details">
@@ -179,7 +179,7 @@ const FacadeDetails = {
                                 </div>
                                 <div class="weather-forecast-wrapper">
                                     <h3>Bulletin météo</h3>
-                                    ${FacadeDetails.renderWeatherForecast(weatherForecaseData)}
+                                    ${FacadeDetails.renderWeatherForecast(weatherForecastData)}
                                 </div>
                             </div>
                         </div>

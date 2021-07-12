@@ -21,7 +21,7 @@ export const data = {
         "temperature": 10,
         "weather_code": 389,
         "weather_icons": [
-            "https://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0024_thunderstorms.png"
+            "http://assets.weatherstack.com/images/wsymbols01_png_64/wsymbol_0024_thunderstorms.png"
         ],
         "weather_descriptions": [
             "Rain With Thunderstorm"
