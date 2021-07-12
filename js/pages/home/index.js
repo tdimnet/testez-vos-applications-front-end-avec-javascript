@@ -1,7 +1,7 @@
 import Header from '../common/header/index.js'
 import Pagination from '../common/pagination/index.js'
 
-import { retrieveSensorsData } from '../../utils/api/sensorsApi.js'
+import { retrieveSensorsData } from '../../utils/api/sensorsApi/index.js'
 
 import { ITEMS_PER_PAGE } from '../../constants.js'
 
