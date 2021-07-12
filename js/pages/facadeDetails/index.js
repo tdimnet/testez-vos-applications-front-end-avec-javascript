@@ -7,7 +7,7 @@ const FacadeDetails = {
     renderSensorImg: sensor => {
         return `
             <div class="sensor-details-img-gallery-wrapper">
-                <img class="sensor-details-img" src="/assets/${sensor.medias[0]}" alt="Capteur n°${sensor.id}">
+                <img data-testid="sensor-image" class="sensor-details-img" src="/assets/${sensor.medias[0]}" alt="Capteur n°${sensor.id}">
             </div>
         `
     },
@@ -72,7 +72,7 @@ const FacadeDetails = {
                     <tr>
                         <th>8</th>
                         <th>Date de dernière visite</th>
-                        <td class="sensor-last-inspection-date">
+                        <td data-testid="last-inspection-date" class="sensor-last-inspection-date">
                             ${sensor.inspection.lastInspectionDate}
                         </td>
                     </tr>
