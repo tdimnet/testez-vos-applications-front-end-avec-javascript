@@ -32,8 +32,14 @@ const findComponentByPath = (path, routes) => routes.find(r => r.path.match(new 
 const bindEventListener = () => {
     if (parseLocation() === '/') {
         handleSignInForm()
+    } else if (parseLocation() === '/home') {
+        const $pagination = document.querySelector('.pagination-list')
+        $pagination.addEventListener('click', (e) => {
+            e.preventDefault()
+        })
     }
 }
+
 
 export const router = async () => {
     // Find the component based on the current path
