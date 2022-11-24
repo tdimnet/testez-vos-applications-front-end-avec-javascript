@@ -16,7 +16,8 @@
     "nightwatch": "^1.7.6"
   },
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "testNightWatch": "node_modules/.bin/nightwatch"
   },
   "keywords": [],
   "author": "",
